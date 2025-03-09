@@ -16,17 +16,17 @@ const LeafletGlobeMap = () => {
   // Marker data for places
   const markers = [
     { id: 1, name: 'United States', coordinates: [-97, 38] },
-    { id: 2, name: 'Guatemala', coordinates: [-75, -11] },
-    { id: 3, name: 'Peru', coordinates: [-9, -11] },
-    { id: 4, name: 'Paraguay', coordinates: [37, -96] },
-    { id: 5, name: 'Algeria', coordinates: [28,2] },
-    { id: 6, name: 'Central African Republic', coordinates: [7,21] },
-    { id: 7, name: 'Madagascar', coordinates: [-20, 46] },
-    { id: 8, name: 'Ethiopia', coordinates: [8,39] },
-    { id: 9, name: 'Pakistan', coordinates: [30,69] },
-    { id: 10, name: 'Uzbekistan', coordinates: [41,63] },
-    { id: 11, name: 'Indonesia', coordinates: [-2, 120] },
-    { id: 12, name: 'France', coordinates: [-9, -75] },
+    { id: 2, name: 'Guatemala', coordinates: [-90, 12] },
+    { id: 3, name: 'Peru', coordinates: [-75, -11] },
+    { id: 4, name: 'Paraguay', coordinates: [-56, -25] },
+    { id: 5, name: 'Algeria', coordinates: [3,30] },
+    { id: 6, name: 'Central African Republic', coordinates: [20,5] },
+    { id: 7, name: 'Madagascar', coordinates: [46, -22] },
+    { id: 8, name: 'Ethiopia', coordinates: [40,8] },
+    { id: 9, name: 'Pakistan', coordinates: [70,27] },
+    { id: 10, name: 'Uzbekistan', coordinates: [70,40] },
+    { id: 11, name: 'Indonesia', coordinates: [115,-3] },
+    { id: 12, name: 'France', coordinates: [3, 45] },
   ];
 
   // Initialize the map

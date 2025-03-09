@@ -1,24 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Manrope:700|Manrope:400');
 
+
 :root {
   --text: hsl(0, 0%, 99%);
   --textDim: hsl(0, 0%, 60%);
   --background: hsl(0, 0%, 7%);
-  
   --primary: hsl(229, 78%, 46%);
   --primaryBg: hsla(155, 100%, 65%, 1%);
-  
-  --primaryHi: hsl(215, 39%, 48%);
-  --primaryFg: hsl(220, 7%, 84%);
-
-  --secondary: hsl(209, 36%, 35%);
-  --secondaryFg: hsl(189, 51%, 75%);
-  --secondaryBg: hsla(207, 43%, 60%, 0.05);
-  --secondaryHi: hsla(207, 47%, 52%, 0.5);
-
-  --accent: hsl(194, 59%, 34%);
+  --primaryHi: hsla(231, 100%, 75%, 0.25);
+  --primaryFg: hsl(155, 100%, 85%);
+  --secondary: hsl(156, 51%, 14%);
+  --secondaryFg: hsl(156, 51%, 75%);
+  --secondaryBg: hsla(156, 51%, 14%, 5%);
+  --secondaryHi: hsla(156, 51%, 30%, 50%);
+  --accent: hsl(155, 100%, 94%);
   --accentBg: hsla(155, 100%, 94%, 1%);
-  --accentHi: hsl(215, 58%, 42%);
+  --accentHi: hsla(155, 100%, 100%, 25%);
 }
 
 body {
@@ -31,8 +28,6 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  overflow-x: hidden;
-  position: relative; /* Added to ensure absolute positioning works for children */
 }
 
 nav {
@@ -56,15 +51,15 @@ nav {
 }
 
 #grid {
-  height: 100vh; /* Full viewport height */
-  width: 100vw; /* Full viewport width */
-  display: flex;
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1; /* Adjusted z-index to ensure it's above the background but behind the title */
+  height: 100%;
+  weight: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin-top: -50px;
+  z-index: -1;
 }
 
 #grid-svg {
@@ -82,12 +77,9 @@ nav {
   border-radius: 100px;
   z-index: 0;
   position: absolute;
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjust position to truly center */
 }
 
-#header {
+#title {
   font-size: 10rem;
   font-weight: 700;
   letter-spacing: -0.8rem;
@@ -95,43 +87,41 @@ nav {
   flex-direction: column;
   position: absolute;
   justify-content: center;
-  align-self: center;
-  height: 100%;
-  z-index: 1000; /* z-index adjusted to be above the grid */
-  top: 20px;
-}
-
-#motto {
-  margin-top: 285px;
-  margin-left: -200px;
-  font-size: 2.5rem;
-  font-weight: 300;
-  letter-spacing: 0rem;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  justify-content: center;
-  align-self: center;
+  align-self: left;
   height: 100%;
   z-index: 1000;
+  top: 0px;
+  width: 90%;
+  left: 75px;
 }
 
-#bluey {
-  margin: 0;
-  background-color: var(--primary);
-}
-
-#header > p {
+#title > p {
   margin: 0;
   line-height: 10rem;
   width: auto;
 }
 
+#title > p:nth-child(1){
+    text-align: left;
+    align-self: left;
+    margin-top: -175px;
+}
+
+#title > p:nth-child(2){
+  color: var(--primary);
+  align-self: flex-end;
+}
+
+#title > p:nth-child(3){
+  align-self: flex-end;
+}
 
 #material-icons {
   display: none;
   fill: var(--text);
 }
+
+
 
 #button {
   display: flex;
@@ -187,20 +177,13 @@ span {
 }
 
 #button.first {
-  top: 12%;
-  right: 20%;
+    bottom: 13%;
+    right: 11%;
 }
 
 #button.sec {
-  bottom: 13%; /* Adjusted to keep button within the page */
-  right: 5%;   /* Reduced to prevent button from being off-screen */
-  position: absolute;
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-  height: 50px;
-  width: 160px;
-  z-index: 9999;
+  bottom: 13%;
+  right: 11%;
 }
 
 #button.sec > button {
@@ -228,6 +211,7 @@ span {
   background-color: var(--secondaryHi);
 }
 
+
 #top-right {
   position: absolute;
   top: 0;
@@ -244,27 +228,46 @@ span {
   opacity: 50%;
 }
 
+#text{
+    margin-left: +250;
+    margin-right: +250;
+}
+
+#listeroni {
+
+  text-align: center;
+  align-self: center;
+}
+
+
+
+
+
+
+
+
 @media screen and (max-width: 1000px) {
-  #title {
+    #title {
     font-size: 4rem;
     line-height: 0px;
-  }
+    }
 
-  #title > p {
+    #title > p {
     line-height: 5rem;
     letter-spacing: -0.3rem;
-  }
+    }
 
-  nav > :not(.sitename, .material-icons) {
+    nav > :not(.sitename, .material-icons) {
     display: none;
-  }
+    }
 
-  nav {
+    nav {
     justify-content: space-between;
-  }
+    }
 
-  #material-icons {
+    3material-icons {
     display: flex;
     align-items: center;
-  }
+    }
+
 }

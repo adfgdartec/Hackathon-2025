@@ -1,0 +1,30 @@
+body {
+    font-family: 'Manrope';
+    font-weight: 400;
+    background-color: var(--background);
+    color: var(--text);
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow-x: hidden;
+    width: 1200px;
+  }
+  :root {
+    --text: hsl(0, 0%, 99%);
+    --textDim: hsl(0, 0%, 60%);
+    --background: hsl(0, 0%, 7%);
+    --primary: hsl(229, 78%, 46%);
+    --primaryBg: hsla(155, 100%, 65%, 1%);
+    --primaryHi: hsla(231, 100%, 75%, 0.25);
+    --primaryFg: hsl(155, 100%, 85%);
+    --secondary: hsl(156, 51%, 14%);
+    --secondaryFg: hsl(156, 51%, 75%);
+    --secondaryBg: hsla(156, 51%, 14%, 5%);
+    --secondaryHi: hsla(156, 51%, 30%, 50%);
+    --accent: hsl(155, 100%, 94%);
+    --accentBg: hsla(155, 100%, 94%, 1%);
+    --accentHi: hsla(155, 100%, 100%, 25%);
+    position: relative; 
+  }
